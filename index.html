@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body  onload="onLoad();">
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="mypic">
@@ -51,9 +51,10 @@
     </header>
     <div class="theme">
         <h3>Select Theme</h3>
-        <button type="button" style="border: 1px solid;padding: 10px;box-shadow: 2px 2px;" onclick="changeTheme('#dddfd4','#173e43','#3fb0ac');"></button>
-        <button type="button" style="border: 1px solid;padding: 10px;box-shadow: 2px 2px;" onclick="changeTheme('#fff5d7','brown','#ffaaab');"></button>
-        <button type="button" style="border: 1px solid;padding: 10px;box-shadow: 2px 2px;" onclick="changeTheme('#badfe7','#12343b','#388087');"></button>
+        <button type="button"  onclick="changeTheme('#dddfd4','#173e43','#3fb0ac');"></button>
+        <button type="button"  onclick="changeTheme('#fef9c7','#026670','#edeae5');"></button>
+        <button type="button"  onclick="changeTheme('#badfe7','#12343b','#388087');"></button>
+        <button type="button"  onclick="changeTheme('#eee2dc','#123c69','#379683');"></button>
     </div>
 
 
@@ -79,8 +80,7 @@
             <div class="service">
                 <h3>Programming Languages</h3>
                 <p>Intermediate knowledge in Python, C, C++,HTML ,CSS, SaSS, Javascript, SQLite, Web Scraping, Git etc.
-                    Completed more than 10 online courses in various programming Languages
-                    and concepts.Entry level knowledge in flutter and Dart.
+                    Entry level knowledge in flutter and Dart.
                 </p>
             </div>
 
@@ -95,7 +95,7 @@
             <div class="service">
                 <h3>Python-Machine learning</h3>
                 <p>Stepping into machine learning using various libraries in python which include Numpy, Pandas,
-                    Matploit, Pytorch etc.</p>
+                    Matplotlib, Pytorch etc.</p>
             </div>
             <div class="service">
                 <h3>Cyber Security</h3>
@@ -198,6 +198,7 @@
     <img class="ghub" src="https://ghchart.rshah.org/muhdhisham" alt="2016rshah's Github chart" />
        
     </section>
+    
     <!-- Footer -->
     <footer class="footer">
         <a href="mailto:muhdhisham034@gmail.com" class="footer__link">muhdhisham034@gmail.com</a>

@@ -10,14 +10,7 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     })
 })
-function changeTheme(color1, color2,color3) {
-    $(":root").css("--clr-light", color1);
 
-    $(":root").css("--clr-dark", color2);
-
-    $(":root").css("--clr-accent", color3);
-
-}
 gsap.registerPlugin(TextPlugin);
 const words = ["A Python Developer", "A Web-Developer", "A Cyber Security Enthusiast", "A Technophile", "An IOT Developer"]
 
@@ -34,3 +27,39 @@ words.forEach(word => {
 //     document.getElementById("nav").classList.toggle("change");
 //     document.getElementById("menu-bg").classList.toggle("change-bg");
 //   }
+
+var localStorage = ('localStorage' in window);
+
+function saveData(key, value) {
+    if (localStorage) {
+        localStorage.setItem(key, value);
+    }
+}
+
+function localData(key) {
+    if (localStorage) {
+        if (key in localStorage) {
+            return localStorage.getItem(key);
+        }
+
+    }
+}
+
+function changeTheme(color1, color2, color3) {
+    $(":root").css("--clr-light", color1);
+
+    $(":root").css("--clr-dark", color2);
+
+    $(":root").css("--clr-accent", color3);
+
+    saveData("light", color1);
+    saveData("dark", color2);
+    saveData("accent", color3);
+
+}
+
+function onLoad() {
+    localData("light") && document.documentElement.style.setProperty('--clr-light', localData("light"));
+    localData("dark") && $(":root").css("--clr-dark", localData("dark"));
+    localData("accent") && $(":root").css("--clr-accent", localData("accent"));
+}
