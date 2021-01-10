@@ -57,9 +57,35 @@ words.forEach(word => {
     tl.to('#text', { duration: 1.5, text: word })
     masterTl.add(tl)
 })
-// function menuOnClick() {
-//     document.getElementById("menu-bar").classList.toggle("change");
-//     document.getElementById("nav").classList.toggle("change");
-//     document.getElementById("menu-bg").classList.toggle("change-bg");
-//   }
 
+var $input;
+
+function onInputFocus(event) {
+  var $target = $(event.target);
+  var $parent = $target.parent();
+  $parent.addClass('input--filled');
+};
+
+function onInputBlur(event) {
+  var $target = $(event.target);
+  var $parent = $target.parent();
+
+  if (event.target.value.trim() === '') {
+    $parent.removeClass('input--filled');
+  }
+};
+
+$(document).ready(function() {
+  $input = $('.input__field');
+  
+  // in case there is any value already
+  $input.each(function(){
+    if ($input.val().trim() !== '') {
+      var $parent = $input.parent();
+      $parent.addClass('input--filled');
+    }
+  });
+  
+  $input.on('focus', onInputFocus);
+  $input.on('blur', onInputBlur);
+});
