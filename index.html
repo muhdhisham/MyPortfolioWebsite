@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 
-<body  onload="onLoad();">
+<body  onload="onLoad(); change();">
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="mypic">
@@ -36,13 +36,17 @@
                 
     </header>
     <br><br><br>
+
+
+
     <div class="theme">
         <h3>Select Theme</h3>
-        <button type="button"  onclick="changeTheme('#dddfd4','#173e43','#3fb0ac');"></button>
-        <button type="button"  onclick="changeTheme('#c4a35a','#2D2926FF','#edeae5');"></button>
-        <button type="button"  onclick="changeTheme('#badfe7','#12343b','#388087');"></button>
-        <button type="button"  onclick="changeTheme('#eee2dc','#123c69','#379683');"></button>
+        <button type="button"  onclick="changeTheme('#dddfd4','#173e43','#3fb0ac'); change();"></button>
+        <button type="button"  onclick="changeTheme('#c4a35a','#2D2926FF','#949400'); change();"></button>
+        <button type="button"  onclick="changeTheme('#badfe7','#12343b','#388087'); change();"></button>
+        <button type="button"  onclick="changeTheme('#eee2dc','#123c69','#379683'); change();"></button>
     </div>
+
 
 
     <!-- Introduction -->
@@ -96,6 +100,7 @@
     </section>
 
 
+
     <!-- About me -->
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">Who I am</h2>
@@ -112,6 +117,9 @@
         </div>
         <img src="img/code.jpg" alt="" class="about-me__img">
     </section>
+
+
+
     <!-- Education -->
     <section class="education" id="_education">
         <h2 class="section__title section__title--education">Education</h2>
@@ -126,17 +134,19 @@
             <div class="institution">
                 <h3>
                     <i class="fas fa-school"></i> Higher Secondary [2017-2019]</h3>
-                <p>Finished Higher Secondary Education from St. Michael's Anglo Indian Higher Secondary School, Kannur.
+                <p>Completed Higher Secondary Education from St. Michael's Anglo Indian Higher Secondary School, Kannur.
                 </p>
             </div>
 
             <div class="institution">
                 <h3>
                     <i class="fas fa-chalkboard-teacher"></i> High School [2017]</h3>
-                <p>Finished High School from St.Michael's Anglo Indian Higher Secondary School Kannur .</p>
+                <p>Completed High School from St.Michael's Anglo Indian Higher Secondary School Kannur, Kerala .</p>
             </div>
         </div>
     </section>
+
+
 
     <!-- My Work -->
     <section style="border-bottom: 5px solid white;" class="my-work" id="work">
@@ -179,7 +189,17 @@
           </a>
         </div>
     </section>
-    
+
+
+
+    <section class="education" id="github_stats">
+        <h2 style="font-size: 2rem;" class="section__title section__title--education">Checkout My Github Stats</h2>
+    <!-- <img class="ghub" src="https://github.com/users/muhdhisham/contributions" alt="muhdhisham's Github chart" /> -->
+    <img class="ghub" src="https://ghchart.rshah.org/c4a35a/muhdhisham" id="ghub_stats" alt="muhdhisham's Github Chart" />
+    <!-- <img class="ghub" src="https://grass-graph.moshimo.works/images/muhdhisham.png?background=none"> -->
+    </section>
+
+
     <section class="education co" id="contact">
         <form style="margin-top: 2rem; margin-bottom: 2rem;" class="form">
             <h2 class="contact">CONTACT ME</h2>
@@ -189,12 +209,9 @@
             <button>Send Message</button>
           </form>
     </section>
-    
-    <section class="education" id="github_stats">
-        <h2 style="font-size: 2rem;" class="section__title section__title--education">Checkout My Github Stats</h2>
-    <img class="ghub" src="https://ghchart.rshah.org/muhdhisham" alt="muhdhisham's Github chart" />
-       
-    </section>
+
+
+
     <footer class="footer">
         <a href="mailto:muhdhisham034@gmail.com" class="footer__link">muhdhisham034@gmail.com</a>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
@@ -202,19 +219,16 @@
   <div class="rounded-social-buttons">
                     <a class="social-button facebook" href="https://www.facebook.com/muhdhishamv/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="social-button twitter" href="https://www.twitter.com/muhdhisham_v" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a class="social-button linkedin" href="www.linkedin.com/in/muhdhishamv" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/in/muhdhishamv" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a class="social-button instagram" href="https://www.instagram.com/__the_protagonist/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a class="social-button github" href="https://www.github.com/muhdhisham" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
 
     </footer>
     
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
-$(window).load(function () {
-    $(".spinner").fadeOut(1500);
-});
-</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/EasePack.min.js"></script>
