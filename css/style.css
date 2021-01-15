@@ -140,7 +140,7 @@ h3 {
 }
 
 .theme button:nth-of-type(1) {
-  background-color: #dddfd4;
+  background-color: #ffa781;
 }
 
 .theme button:nth-of-type(2) {
@@ -250,7 +250,9 @@ header {
   z-index: 1000;
   position: fixed;
 }
-
+button .nav-toggle:active{
+  overflow: hidden;
+}
 .nav-open .nav {
   transform: translateX(0);
 }
@@ -496,7 +498,7 @@ header {
 .education {
   display: flex;
   flex-direction: column;
-  padding-left: 1em;
+  padding-left: 0em;
   width: calc(100% + 2em);
   left: -1em;
 }
@@ -799,6 +801,7 @@ input {
 .co{
    background-image: url("https://www.idfreshfood.com/wp-content/uploads/2017/09/contact_us_2.jpg"); 
 }
+
 input:focus {
   border-bottom: 2px solid #78788c;
 }

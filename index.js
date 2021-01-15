@@ -33,6 +33,8 @@ function onLoad() {
     localData("dark") && $(":root").css("--clr-dark", localData("dark"));
     localData("accent") && $(":root").css("--clr-accent", localData("accent"));
 }
+
+
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link')
 
