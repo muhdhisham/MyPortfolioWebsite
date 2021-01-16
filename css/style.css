@@ -731,12 +731,13 @@ textarea {
 }
 .rounded-social-buttons .social-button.github {
   background: black;
+  color: whitesmoke;
   border-color: #125688;
 }
 .rounded-social-buttons .social-button.github:hover,
 .rounded-social-buttons .social-button.github:focus {
-  color: grey;
-  background: black;
+  color: black;
+  background: white;
   border-color: grey;
 }
 
