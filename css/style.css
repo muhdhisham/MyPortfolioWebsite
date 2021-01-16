@@ -681,15 +681,15 @@ textarea {
   border-color: #007bb5;
 }
 
-.rounded-social-buttons .social-button.youtube {
-  background: #bb0000;
+.rounded-social-buttons .social-button.phone {
+  background: #1e7c4d;
+  color: #ffffff;
 }
 
-.rounded-social-buttons .social-button.youtube:hover,
-.rounded-social-buttons .social-button.youtube:focus {
-  color: #bb0000;
+.rounded-social-buttons .social-button.phone:hover,
+.rounded-social-buttons .social-button.phone:focus {
+  color: #1e7c4d;
   background: #fefefe;
-  border-color: #bb0000;
   border-color: #125688;
 }
 
@@ -720,6 +720,14 @@ textarea {
     #bc1888 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+
+  color: #ffffff;
+}
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
+  color: red;
+  background: #fefefe;
+  border-color: #125688;
 }
 .rounded-social-buttons .social-button.github {
   background: black;
@@ -731,12 +739,7 @@ textarea {
   background: black;
   border-color: grey;
 }
-.rounded-social-buttons .social-button.instagram:hover,
-.rounded-social-buttons .social-button.instagram:focus {
-  color: #125688;
-  background: #fefefe;
-  border-color: #125688;
-}
+
 .social-icons {
   display: flex;
   justify-content: center;
