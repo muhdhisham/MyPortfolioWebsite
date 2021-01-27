@@ -51,7 +51,7 @@ body {
   overflow-x: hidden;
 }
 section {
-  padding: 5em 2em;
+  padding: 2em 2em;
 }
 
 img {
@@ -350,6 +350,7 @@ button .nav-toggle:active{
 /*  My services section  */
 
 .my-services {
+  margin-top: 2em;
   background-color: var(--clr-dark);
   background-image: url("../img/laptop.jpg");
   background-size: cover;
