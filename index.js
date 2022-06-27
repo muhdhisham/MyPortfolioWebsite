@@ -1,5 +1,18 @@
 var localStorage = ('localStorage' in window);
 
+function disappearBg(){
+    document.getElementById('intro-gsap').style.backgroundColor = 'transparent';
+    document.getElementById('intro-gsap').style.boxShadow = 'none';
+}
+
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+// Check if the media query is true
+if (mediaQuery.matches) {
+  // Then trigger an alert
+  disappearBg();
+}
+
+
 function saveData(key, value) {
     if (localStorage) {
         localStorage.setItem(key, value);
@@ -15,6 +28,28 @@ function localData(key) {
     }
 }
 
+function changeWave(k) {
+    console.log("hALO")
+    if(k==1){
+        $(":root").css("--ff-wave", 'url("/img/wave1.svg")');
+        saveData("wave", 'url("/img/wave1.svg")');
+    }
+    else if(k==2){
+        $(":root").css("--ff-wave", 'url("/img/wave2.svg")');
+        saveData("wave", 'url("/img/wave2.svg")');
+    }
+    else if(k==3){
+        $(":root").css("--ff-wave", 'url("/img/wave3.svg")');
+        saveData("wave", 'url("/img/wave3.svg")');
+    }
+    else if(k==4){
+        $(":root").css("--ff-wave", 'url("/img/wave4.svg")');
+        saveData("wave", 'url("/img/wave4.svg")');
+    }
+}
+
+
+
 function changeTheme(color1, color2, color3) {
     $(":root").css("--clr-light", color1);
 
@@ -22,9 +57,13 @@ function changeTheme(color1, color2, color3) {
 
     $(":root").css("--clr-accent", color3);
 
+
+
     saveData("light", color1);
     saveData("dark", color2);
     saveData("accent", color3);
+
+
 
 }
 
@@ -32,6 +71,11 @@ function onLoad() {
     localData("light") && document.documentElement.style.setProperty('--clr-light', localData("light"));
     localData("dark") && $(":root").css("--clr-dark", localData("dark"));
     localData("accent") && $(":root").css("--clr-accent", localData("accent"));
+
+
+    
+    localData("wave") && $(":root").css("--ff-wave", localData('wave'));
+
 }
 
 

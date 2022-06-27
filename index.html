@@ -36,6 +36,7 @@
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,64L26.7,69.3C53.3,75,107,85,160,112C213.3,139,267,181,320,170.7C373.3,160,427,96,480,85.3C533.3,75,587,117,640,133.3C693.3,149,747,139,800,133.3C853.3,128,907,128,960,117.3C1013.3,107,1067,85,1120,80C1173.3,75,1227,85,1280,80C1333.3,75,1387,53,1413,42.7L1440,32L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg> -->
 
     <header>
+        
         <div class="logo">
             <img src="img/logo.png" alt="mypic">
         </div>
@@ -45,8 +46,8 @@
         <nav style="opacity: 0.9;" class="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">Skills and Interests</a></li>
                 <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
                 <li class="nav__item"><a href="#github_stats" class="nav__link">My Github Chart</a></li>
@@ -58,10 +59,10 @@
 
     <div class="theme">
         <h3>Select Theme</h3>
-        <button type="button" onclick="changeTheme('#ffa781','#5b0e2d','#f9858b'); change();"></button>
-        <button type="button" onclick="changeTheme('#c4a35a','#2D2926FF','#949400'); change();"></button>
-        <button type="button" onclick="changeTheme('#badfe7','#12343b','#388087'); change();"></button>
-        <button type="button" onclick="changeTheme('#eee2dc','#123c69','#379683'); change();"></button>
+        <button type="button" onclick="changeTheme('#ffa781','#5b0e2d','#f9858b');  changeWave(1); change(); "></button>
+        <button type="button" onclick="changeTheme('#c4a35a','#2D2926FF','#949400'); changeWave(2); change();"></button>
+        <button type="button" onclick="changeTheme('#badfe7','#12343b','#388087'); changeWave(3); change();"></button>
+        <button type="button" onclick="changeTheme('#eee2dc','#123c69','#379683'); changeWave(4); change();"></button>
     </div>
 
 
@@ -72,7 +73,8 @@
         <h1 class="section__title section__title--intro">
             Hi, I am <strong>Muhammed Hisham</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">
+
+        <p id="intro-gsap" class="section__subtitle section__subtitle--intro">
             <span class="box"></span>
             <span class="hi">I'm</span>
             <span class="cursor">_</span>
