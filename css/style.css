@@ -145,7 +145,7 @@ h3 {
 }
 
 .theme button:nth-of-type(2) {
-  background-color: #c4a35a;
+  background-color: #565656;
 }
 
 .theme button:nth-of-type(3) {
@@ -158,6 +158,7 @@ h3 {
 
 .section__title {
   margin-bottom: 0.25em;
+  
 }
 
 .section__title--intro {
@@ -523,7 +524,12 @@ button .nav-toggle:active{
 }
 
 /* My Work */
-
+.section__title--work  {
+  text-align: center;
+}
+.section__subtitle--work{
+  text-align: center;
+}
 .my-work a {
   background-color: var(--clr-dark);
   color: var(--clr-light);
@@ -541,6 +547,7 @@ button .nav-toggle:active{
 .portfolio__item {
   background: var(--clr-accent);
   overflow: hidden;
+  scale: 20%;
 }
 
 .portfolio__img {
