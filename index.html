@@ -35,7 +35,9 @@
 
 <body onload="onLoad(); change();">
 
-
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 
     <header>
         <div class="logo">
@@ -60,9 +62,9 @@
 
     <div class="theme">
         <h3>Select Theme</h3>
-        <button type="button" onclick="changeTheme('#ffa781','#5b0e2d','#f9858b'); changeWave(1); change(); "></button>
+        <button type="button" onclick="changeTheme('#EADEDE','#000000','#B85252'); changeWave(1); change(); "></button>
         <button type="button" onclick="changeTheme('#d7cec7','#5b0e2d','#565656'); changeWave(2); change();"></button>
-        <button type="button" onclick="changeTheme('#badfe7','#12343b','#388087'); changeWave(3); change();"></button>
+        <button type="button" onclick="changeTheme('#DCD7C9','#2C3639','#A27B5C'); changeWave(3); change();"></button>
         <button type="button" onclick="changeTheme('#eee2dc','#123c69','#379683'); changeWave(4); change();"></button>
     </div>
     
@@ -100,7 +102,7 @@
                 I'm also interested in penetration testing and other aspects of cyber security.
             </p>
         </div>
-        <img src="https://cdn.dribbble.com/users/1059583/screenshots/4171367/coding-freak.gif" alt=""
+        <img src="https://i.pinimg.com/originals/50/83/e0/5083e0a2a7dcaae07c142e8b87036a27.gif" alt=""
             class="about-me__img">
     </section>
 
@@ -267,7 +269,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="index.js"></script>
-
+    <script>
+        $(window).on("load",function(){
+         $(".loader-wrapper").fadeOut("slow");
+    });
+    </script>
 </body>
 
 </html>
